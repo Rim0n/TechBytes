@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBytes</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light-gray text-dark-gray mx-auto">
+    <header class="bg-white text-dark-gray py-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-3xl font-bold"><span class="text-primary">Tech</span> <span>Bytes</span></h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#home"
+                            class="hover:bg-gray-300 transition duration-300 ease-in-out py-2 px-4 rounded-lg">Home</a>
+                    </li>
+                    <li><a href="#featured"
+                            class="hover:bg-gray-300 transition duration-300 ease-in-out py-2 px-4 rounded-lg">FeaturedArticles</a>
+                    </li>
+                    <li><a href="#newsletter"
+                            class="hover:bg-gray-300 transition duration-300 ease-in-out py-2 px-4 rounded-lg">Newsletter</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="flex items-center space-x-2">
+                <input type="text" placeholder="Search" class=" h-8 border-gray-300 border-solid-300 border-2 rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-5.197-5.197M15.803 15.803A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607z" />
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="py-12 bg-white">
+        <div class="container mx-auto px-4 flex flex-col items-center justify-center h-full">
+            <div class="text-center">
+                <h2 id="animated-title" class="text-4xl font-bold mb-4">Welcome to TechBytes</h2>
+                <p class="text-xl mb-4">Your source for the latest tech news and insights.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured" class="py-12 bg-light-gray">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-4 text-center">Featured Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105">
+                    <img src="image-1.jpg" alt="The Future of AI" class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-2">The Future of AI</h3>
+                    <p class="text-lg mb-4">An in-depth look at the advancements in artificial intelligence and what
+                        they mean for the future.</p>
+                    <a href="#" class="text-primary hover:underline">Read more</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105">
+                    <img src="image-2.jpg" alt="Next-Gen Gadgets" class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-2">Next-Gen Gadgets</h3>
+                    <p class="text-lg mb-4">Explore the latest gadgets that are shaping the future of technology.</p>
+                    <a href="#" class="text-primary hover:underline">Read more</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105">
+                    <img src="image-3.jpg" alt="Cybersecurity Trends" class="w-full h-48 object-cover mb-4 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-2">Cybersecurity Trends</h3>
+                    <p class="text-lg mb-4">Stay informed about the latest trends and practices in cybersecurity.</p>
+                    <a href="#" class="text-primary hover:underline">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+            <p class="text-xl mb-4">Stay updated with the latest tech news and articles by subscribing to our
+                newsletter.</p>
+            <form action="#" method="POST" class="bg-light-gray p-6 rounded-lg shadow-lg">
+                <div class="mb-4">
+                    <label for="newsletter-email" class="block text-lg font-semibold mb-2">Email</label>
+                    <input type="email" id="newsletter-email" name="newsletter-email"
+                        class="w-full p-2 border border-gray-300 rounded-lg">
+                </div>
+                <button type="submit"
+                    class="bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary-hover">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-dark-gray text-light-gray py-8">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h2 class="text-2xl font-bold mb-4">About Us</h2>
+                <p class="text-lg mb-4">TechBytes is your go-to source for the latest in technology. From gadgets to AI,
+                    we bring you insightful articles and in-depth reviews to keep you ahead of the curve.</p>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Quick Links</h2>
+                <ul class="text-lg">
+                    <li class="mb-2"><a href="#home" class="hover:text-primary">Home</a></li>
+                    <li class="mb-2"><a href="#featured" class="hover:text-primary">Featured Articles</a></li>
+                    <li class="mb-2"><a href="#newsletter" class="hover:text-primary">Newsletter</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Follow Us</h2>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:text-primary">Facebook</a></li>
+                    <li><a href="#" class="hover:text-primary">Twitter</a></li>
+                    <li><a href="#" class="hover:text-primary">Instagram</a></li>
+                    <li><a href="#" class="hover:text-primary">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+                <p class="text-lg mb-4">Have any questions or suggestions? Reach out to us via the form below or email
+                    us at <a href="mailto:contact@techbytes.com"
+                        class="text-primary hover:underline">contact@techbytes.com</a>.</p>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p>&copy; 2024 TechBytes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
