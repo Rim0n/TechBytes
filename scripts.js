@@ -1,12 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
     const title = document.getElementById('animated-title');
     const titleText = title.textContent;
-    const letters = titleText.split('');// Function to animate letters
+    const words = titleText.split(' '); // Split the text into words
+
+    // Function to animate letters
     function animateLetters() {
         let newTitle = '';
-        letters.forEach((letter, index) => {
-            // Wrap each letter in a span with animation
-            newTitle += `<span style="display: inline-block; animation: scaleIn 1s ease ${index * 0.1}s forwards;">${letter}</span>`;
+        words.forEach((word, wordIndex) => {
+            word.split('').forEach((letter, letterIndex) => {
+                // Wrap each letter in a span with animation
+                newTitle += `<span style="display: inline-block; animation: rotateIn 1s ease ${(wordIndex * 0.1 + letterIndex * 0.1)}s forwards;">${letter}</span>`;
+            });
+            newTitle += ' '; // Add space after each word
         });
         title.innerHTML = newTitle;
     }
@@ -31,4 +36,20 @@ document.addEventListener('DOMContentLoaded', function() {
             body.classList.add('theme-light');
         }
     });
-});    
+});
+
+// Add this CSS to your stylesheet for the rotateIn animation
+const style = document.createElement('style');
+style.innerHTML = `
+@keyframes rotateIn {
+    0% {
+        opacity: 0;
+        transform: rotate(-200deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+`;
+document.head.appendChild(style);
